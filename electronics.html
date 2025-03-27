@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .product p {
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+        .footer-section h3 {
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .footer-section p, .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: #e74c3c;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #4a6491;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b><i>ELECTRONICS STORE</i></b></h1>
+        <hr style="border: 0; border-top: 5px solid black;">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQn2yf6DYDFUyuczlKkNtpSxz4hwZNoIGVxfE30Rd_PamEs-332YVFiATaaMwhxx6B5KxXtEudvklvn1ubVavEcC6XNTJPPBQjptnsLEf5RzUfE-ZmYm8ZZOc0&usqp=CAE" width="200" height="200" alt="Sony WH-1000XM4 Headphones">
+            <h3>Sony WH-1000XM4 Wireless Noise Cancelling Headphones</h3>
+            <p>₹24,990</p>
+            <button onclick="addToCart('Sony WH-1000XM4', 24990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTgFXy1Hs33ynqHj1jzhjtDWDuXN-VuQ4rbxckXHzl6v73vlxHrqlg7gKIWpJThc_wIAhcOIANuOOObUHr_8DFTw3yCwepSc_R_DujS7JHVBw3viGNH_rMvrg&usqp=CAE" width="200" height="200" alt="Apple iPad Air">
+            <h3>Apple iPad Air (10.9-inch, Wi-Fi, 64GB) - Space Gray</h3>
+            <p>₹49,900</p>
+            <button onclick="addToCart('Apple iPad Air', 49900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTBx4uv2qD7XjfzSrlJYOuxlOv_E3fjAg2jMWHugGpEmSfZs_mzKc8HwCCynxwOnV0OkHjZMyQdHJYvk6NK7uF9LzK5h3CKOQxu3gbw-Fc&usqp=CAE" width="200" height="200" alt="Dell XPS 13 Laptop">
+            <h3>Dell XPS 13 9310 13.4-inch FHD+ Laptop (11th Gen i7)</h3>
+            <p>₹1,49,990</p>
+            <button onclick="addToCart('Dell XPS 13', 149990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ8aJzS6KtjK5Bz77I87NAO1a6Ljbe_P58tDf1EHit0HCU5vLBL5M0t-xwt7Be53ftD0zrudWzyrg6gjvock-_k0F_V-I0Fv4k-9tsPm9d_IoV9id3ExBKUWQ&usqp=CAE" width="200" height="200" alt="Bose SoundLink Revolve+">
+            <h3>Bose SoundLink Revolve+ Bluetooth Speaker</h3>
+            <p>₹23,500</p>
+            <button onclick="addToCart('Bose SoundLink Revolve+', 23500)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSe-PklFnVa939q32Kelp3YIT9j2Q7zP_IJTObdoPClgPjWRdk4et8jmImrAJIXsyHwHbS_dg2psaQONMypAEPgb4YvXigM6Co6o4JnvAh3EFkh-lKUCcjH3w&usqp=CAE" width="200" height="200" alt="Samsung Galaxy Tab S7">
+            <h3>Samsung Galaxy Tab S7 (11-inch, 128GB, Wi-Fi)</h3>
+            <p>₹54,999</p>
+            <button onclick="addToCart('Samsung Galaxy Tab S7', 54999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQH4qHL3nenEcaYWfJsqtM3xJ5b8sVrhjy2P1dVxVB7ET2-bqmwIG3q68OS3GjNXOlQYFqjmiju5bruIRc3Lo9qEg_9pr-iBgKo14yugYDo6lNBW4VNPMajxg&usqp=CAE" width="200" height="200" alt="HP Pavilion Gaming Laptop">
+            <h3>HP Pavilion Gaming 15.6-inch Laptop (Ryzen 5, GTX 1650)</h3>
+            <p>₹64,990</p>
+            <button onclick="addToCart('HP Pavilion Gaming', 64990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuboXrvYp0o7XlrNA7XAOSi7H5t_wNZLtcjRb1fz6nJVJ7ojNS4mu6jxBHYuMXYf7JdhbEf3lzfrDKvQ9PSv8Ub0uKWAT_C3x2CpEuFNleSco4jy5faRoVIg&usqp=CAE" width="200" height="200" alt="JBL Flip 5 Speaker">
+            <h3>JBL Flip 5 Waterproof Portable Bluetooth Speaker</h3>
+            <p>₹9,999</p>
+            <button onclick="addToCart('JBL Flip 5', 9999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSYugTXRkuAFL4ronMKXeiTa6Ut9XGYoNDWGyKTsqi8HfM_ak1K1j1qKD7jIFOf2OKro9g4Ui6r5pnCaZ2qVeBSNKqlVqqYqDt4VKpAjrByIthsbuVUcPAm&usqp=CAE" width="200" height="200" alt="Logitech MX Master 3">
+            <h3>Logitech MX Master 3 Advanced Wireless Mouse</h3>
+            <p>₹8,995</p>
+            <button onclick="addToCart('Logitech MX Master 3', 8995)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT67P7nO9MvUUiO1N7923PmiQDqdIzOKj2jAHx58jEzchiDkL3dHjM_PG_gW30Nlo3Trn4GbDhzLHbiBMnaT_gOxCvHT7Aj1fXn5uWCAjbFUGvKRfXQbcaSFw&usqp=CAE" width="200" height="200" alt="Apple MacBook Air">
+            <h3>Apple MacBook Air (13-inch, M1, 8GB RAM, 256GB SSD)</h3>
+            <p>₹92,990</p>
+            <button onclick="addToCart('Apple MacBook Air', 92990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRQOCKWVDnsCmQ0UQd-E_ztjSHMEbl0EhYlSzlbb3Y5xtTWbQzENEU4n3zW8rE1NLnHDBEl8KhMu6Bk7naRMbD1fj2o8-Hc_r46g66uiH_x7n7r7xHYBzfdyw&usqp=CAE" width="200" height="200" alt="Sony Bravia 55-inch TV">
+            <h3>Sony Bravia 55-inch 4K Ultra HD Smart LED TV</h3>
+            <p>₹69,990</p>
+            <button onclick="addToCart('Sony Bravia 55-inch', 69990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTw8oL847m919FX0p6UZvhG1VnUMBtj0wKFcOruVhjdMfi3XtZHoid7XWHvM3jF5kKYaGSh3zEZfKeXdXDk86-eD2d3R_XmdmLd62Uepwjy91SLgZHQ2V60vg&usqp=CAE" width="200" height="200" alt="Amazon Echo Dot">
+            <h3>Amazon Echo Dot (4th Gen) Smart Speaker with Alexa</h3>
+            <p>₹4,499</p>
+            <button onclick="addToCart('Amazon Echo Dot', 4499)">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQvs3EoTenyF-1ukARYV6anSqBh9BH5r6FGw53KZEkGNvd3iE3Wo0eTGbDvBHaa2wUe99z33NfWB-quigOr-VXfMQXve6KT7OpOfmFf5JezSLR1xq_52nNZ&usqp=CAE" width="200" height="200" alt="Canon EOS M50">
+            <h3>Canon EOS M50 Mark II Mirrorless Camera with EF-M Lens</h3>
+            <p>₹59,995</p>
+            <button onclick="addToCart('Canon EOS M50', 59995)">Add to Cart</button>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ1tDd4CFYkHUHugJXsMDDs9takhI0ukSiOWwOsy7Mn7XCyT_Lxz-Sl7k3M4PfzTUg-xIBRMAAHQ7kipgJiPIMjgzKKTIrSBYeT6QN2dO2W&usqp=CAE" width="200" height="200" alt="Microsoft Surface Pro 7">
+            <h3>Microsoft Surface Pro 7 (12.3-inch, i5, 8GB RAM, 128GB SSD)</h3>
+            <p>₹89,990</p>
+            <button onclick="addToCart('Microsoft Surface Pro 7', 89990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTJhKiznKMR4JSeCkr2IwUjAZsJ7kuLJ_cLZqQxOyHRZIWy1bFnZ-ttBUU3iaa0JXtQt2Z0MAbXbMEtC87g-fNM_6fH18b_&usqp=CAE" width="200" height="200" alt="Boat Airdopes">
+            <h3>boAt Airdopes 441 Pro Bluetooth TWS Earbuds</h3>
+            <p>₹2,299</p>
+            <button onclick="addToCart('boAt Airdopes 441 Pro', 2299)">Add to Cart</button>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRO3E0aZ6KyCzEhS5ClM366o92GAdplmqnYZhjDU9M22766w8kCH03u6dhvha309yxqiQcKAYqV2muk0KM67cLAF2cRgTCsOEOfj4uIsAwixusVt0LjnwIz&usqp=CAE" width="200" height="200" alt="Samsung Galaxy Watch 4">
+            <h3>Samsung Galaxy Watch 4 (44mm, Bluetooth, Black)</h3>
+            <p>₹23,999</p>
+            <button onclick="addToCart('Samsung Galaxy Watch 4', 23999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSOh3tBjFPR5CZCjBfuAHwCtXqVA2oG_KNn2_7Sh3bbfJpARtE99025GldCixLDMTNkyUt9oSg2k9_pR7MfG22DXSVvfH2OnoaOVQBGRPg&usqp=CAE" width="200" height="200" alt="LG 32-inch Monitor">
+            <h3>LG 32-inch QHD (2K) IPS Monitor with HDR10</h3>
+            <p>₹24,999</p>
+            <button onclick="addToCart('LG 32-inch Monitor', 24999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTss4SkPcED0cEBsqMr6eWs2z0l-59J2-X-rsaFyxR2S45XAkZQvXqQnsegEsSl6DVWv7waCJC9CKX4nO3m4K3GaCaa-NPrTQ&usqp=CAE" width="200" height="200" alt="HP DeskJet Printer">
+            <h3>HP DeskJet 2723 All-in-One Ink Advantage Printer</h3>
+            <p>₹6,999</p>
+            <button onclick="addToCart('HP DeskJet Printer', 6999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS-AWEBUP7tcJoESbXK0eWNTZfB9RMEeABw8slEhUXA3szTjUcUfHRjIwLXVzwo3dWWkiPdwh_pet4PEakTpqrnfJxjHCoyk8lKn8ueByPC&usqp=CAE" width="200" height="200" alt="OnePlus Smart TV">
+            <h3>OnePlus 43-inch Y Series Full HD Smart Android TV</h3>
+            <p>₹29,999</p>
+            <button onclick="addToCart('OnePlus 43-inch TV', 29999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ-fpfH3FpqnIqSPXHPv8a-hukGNjh6tA28mhDsWHbgSk6c9ORGzjd7U2WCsNqpBSlzw52gp0lAhoo77aqyqF2AFr0OoSFFygPZfWYjqPxZO80tc_lDPSQL&usqp=CAE" width="200" height="200" alt="GoPro Hero 10">
+            <h3>GoPro HERO10 Black Action Camera with Front LCD</h3>
+            <p>₹49,999</p>
+            <button onclick="addToCart('GoPro Hero 10', 49999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSjJe0ms_DVWmNWU0vD-CGuyT5ebfzaGkQfZ8bkcw2ZwdbYOQvTDNgPjZGrWOYfOBvg82lqJnnvm9dUHpRdCcfSfag_DwRgTUhUAcPVJ1vzMhd6yNGTn5F76A&usqp=CAE" width="200" height="200" alt="Sony PlayStation 5">
+            <h3>Sony PlayStation 5 Digital Edition Console</h3>
+            <p>₹39,990</p>
+            <button onclick="addToCart('PlayStation 5 Digital', 39990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 21 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRA2w6wnh-Ym65BRUp2fIlkDoRIj6Zt9xXpoBfdDNrvj_pJIeV5RXfiPaEownLkiT9tqRfSheTKjpgZ9YHvEutuproTJ7Jgd4db9EQluCyDz2K9qYEDJjaW&usqp=CAE" width="200" height="200" alt="Xbox Series X">
+            <h3>Microsoft Xbox Series X 1TB Console</h3>
+            <p>₹49,990</p>
+            <button onclick="addToCart('Xbox Series X', 49990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 22 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT-Euai3pIXViBPQJHB9qiGM5SwYoZ4oWaHQUXGCYXwLoJOQefVAF3DBUaDXbcwqbKL9BYAbHUnfT9M7kdkWbpCUcgc8YK5dtOngyaW5tu8ustY-GSmRGZjDA&usqp=CAE" width="200" height="200" alt="Nintendo Switch">
+            <h3>Nintendo Switch with Neon Blue and Neon Red Joy-Con</h3>
+            <p>₹29,990</p>
+            <button onclick="addToCart('Nintendo Switch', 29990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 23 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTCUUn06IjyrlaFcRy4XHbNxNj0bmDFyWtk6gRx31a9nFTVBLrOpMLup1WyWe2FpH9QhwSmyEEpLLJjQlGSZbWdMmh282wyJG5CIe9oxyc&usqp=CAE" width="200" height="200" alt="Fitbit Charge 5">
+            <h3>Fitbit Charge 5 Advanced Fitness & Health Tracker</h3>
+            <p>₹12,999</p>
+            <button onclick="addToCart('Fitbit Charge 5', 12999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 24 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSk9r8xCFgjdQ9VQ8syoay4rwzTe9Bberbv3IUuL4XqsK5CjbWHOztubXEMZ--nsEgnm-e_3nmV7XAKxtB6UBwIu0vwMSZkmA&usqp=CAE" width="200" height="200" alt="Dyson V8 Vacuum">
+            <h3>Dyson V8 Absolute Cordless Vacuum Cleaner</h3>
+            <p>₹34,990</p>
+            <button onclick="addToCart('Dyson V8 Vacuum', 34990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 25 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR3YNIXzEd_juYLMK_jwq17tslpwoeZkOqWsxQTUuTQFBFFb0ptOiU1icvZv6KeELZhgyiECXz-XqoaEHIA9AQWYH8jxJlBNOaC1homB0Bv24FVjrkl61Ph&usqp=CAE" width="200" height="200" alt="Instant Pot Duo">
+            <h3>Instant Pot Duo 7-in-1 Electric Pressure Cooker</h3>
+            <p>₹9,999</p>
+            <button onclick="addToCart('Instant Pot Duo', 9999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 26 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSKovzUuCl5ytRQw8nmnMT1hPwL6i78tkHtz1gL6aC4rCvE6kyn0ffiJsoEIRKGMsUoi8HL9LDRhOcGppN8tK4nciFtC1b3&usqp=CAE" width="200" height="200" alt="Philips Air Fryer">
+            <h3>Philips HD9252/90 Air Fryer with Rapid Air Technology</h3>
+            <p>₹12,495</p>
+            <button onclick="addToCart('Philips Air Fryer', 12495)">Add to Cart</button>
+        </div>
+
+        <!-- Product 27 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSHUN5wfqactXl0LRnzVgTmOEWpuioQZ5O01OYbYo5c7S7jArcUkdVwfT8K_90ZUS4G_vkFSzwZ1tdcOmqxh_2mwJDKZ5z0sQ&usqp=CAE" width="200" height="200" alt="Mi Robot Vacuum">
+            <h3>Mi Robot Vacuum-Mop 2 Pro with Laser Navigation</h3>
+            <p>₹24,999</p>
+            <button onclick="addToCart('Mi Robot Vacuum', 24999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 28 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQTgX9yvbGb0ZkoOZGUmAbEMpyobXBitmBqzWhw5vPmIRmhq71gUcBj1OGe_XLfoQIiCixKUU4afU7RAGcV2W3EJaO9VGJvKRhaUcgogA&usqp=CAE" width="200" height="200" alt="Samsung Soundbar">
+            <h3>Samsung HW-Q600A 3.1.2ch Soundbar with Dolby Atmos</h3>
+            <p>₹29,990</p>
+            <button onclick="addToCart('Samsung Soundbar', 29990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 29 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTNgxLKg3krebm28He-Mtjotga-l9S26EbqeGpRLf6kblAF8tHElenWpxTEA5IZpOphjSQt72S63epIjWepEX2nOInmnomoWgdkZm7-djP3WKUP0Laz3q-hwQ&usqp=CAE" width="200" height="200" alt="Garmin Forerunner 245">
+            <h3>Garmin Forerunner 245 Music GPS Running Smartwatch</h3>
+            <p>₹28,990</p>
+            <button onclick="addToCart('Garmin Forerunner 245', 28990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 30 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTP7jjwSCAbSg41xUZBjR5eV1Em-cl-Aa9R0hRI-0DS3ygGay6kiZdXHfei3oGOX7EvLlzX54QaLOWR-Jpq1INJF9J7sLVphjQGdoR9Tv-c2lGpq2IfXjrO&usqp=CAE" width="200" height="200" alt="Kindle Paperwhite">
+            <h3>Amazon Kindle Paperwhite (10th Gen, 8GB)</h3>
+            <p>₹12,999</p>
+            <button onclick="addToCart('Kindle Paperwhite', 12999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 31 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ8rk8CQSVv7xLm7fjapX_i7PC1OJFOQ94wHXrdmbhuelT6SLXZf5XrYCJ85Q06TOURpK5BMGqldIh6x8bKNgOOOvATN341oJuDS2PNEE73F56MFxwg0yaA&usqp=CAE" width="200" height="200" alt="Logitech C920 Webcam">
+            <h3>Logitech C920 HD Pro Webcam with Full HD 1080p Video</h3>
+            <p>₹7,995</p>
+            <button onclick="addToCart('Logitech C920 Webcam', 7995)">Add to Cart</button>
+        </div>
+
+        <!-- Product 32 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSeBfWyZ-ALXB-PH2zz2QV_wAHCpXiV6WNzTgO6YT0beQGT1XSi71OHNRPO2jSwHfvATHuN-k0lhtc6QOkMpbhu6ir8jIVgKMCSEDmBRQT8-p0tNwj8--kYsw&usqp=CAE" width="200" height="200" alt="WD My Passport HDD">
+            <h3>WD 2TB My Passport Portable External Hard Drive</h3>
+            <p>₹6,499</p>
+            <button onclick="addToCart('WD My Passport 2TB', 6499)">Add to Cart</button>
+        </div>
+
+        <!-- Product 33 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQEoMoBYsb-5BTp0FB65bzY1pk8mKD7kY9aAXgUnCGTp14Vl4FL67oWbzXw5n1lN7uZQc4IfYr2ZDEqeFMNmeKE_LfE4JjUPGYpCGdGtWyv&usqp=CAE" width="200" height="200" alt="SanDisk Extreme SSD">
+            <h3>SanDisk Extreme 1TB Portable SSD - Up to 1050MB/s</h3>
+            <p>₹12,999</p>
+            <button onclick="addToCart('SanDisk Extreme SSD', 12999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 34 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTCXV5u2pIxeuyw2zMRM9AYv5RYWY--tmbYtLiQbinaDaZ5PjdRLBnOThhtDKxEVqH2-KdCW7xyxL0SGA6g4c-G-uRsqsO8x1oNXJUqyN6FErRze4haj7-l&usqp=CAE" width="200" height="200" alt="TP-Link Archer C6 Router">
+            <h3>TP-Link Archer C6 Gigabit MU-MIMO Wireless Router</h3>
+            <p>₹2,999</p>
+            <button onclick="addToCart('TP-Link Archer C6', 2999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 35 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTXgwkF7sx1Uezsi247NktB8ZOI9FY0bOamukuDhovaG6f2T8fCeH0B6KngJ26lahMkucsU1ncJy3aT-YanqtuucUZ2H98dZNRPay-zqPSjXDMzdzsULU3u&usqp=CAE" width="200" height="200" alt="Epson EcoTank Printer">
+            <h3>Epson EcoTank L3150 WiFi All-in-One Ink Tank Printer</h3>
+            <p>₹15,999</p>
+            <button onclick="addToCart('Epson EcoTank L3150', 15999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your one-stop destination for the latest electronics devices at competitive prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@electronicsstore.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Address: 123 Tech Street, Electronics City, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">📱</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Electronics Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

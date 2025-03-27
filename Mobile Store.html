@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .product p {
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+        .footer-section h3 {
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .footer-section p, .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: #e74c3c;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #4a6491;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b><i>MOBILE PHONES</i></b></h1>
+        <hr style="border: 0; border-top: 5px solid black;">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR37PUHEvMMiqaLvqXUcz0nDTiVj-kTUlY5e0KFf0NFRQPYJudtERbu--OoKrrpvD2GPxaOP5mpRc4ZnZuQpt5VKG1K0eao3a9eZkal_no&usqp=CAE" width="200" height="200" alt="iPhone 13">
+            <h3>Apple iPhone 13 (128GB) - Midnight</h3>
+            <p>₹59,900</p>
+            <button onclick="addToCart('iPhone 13', 59900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJIVxXHCc_ckm-i8GaQJFxvoFhPhMuVTqAfejzBJTxNysVXvw9BjeMNCSmlKRfdj8awv3nDMyY04Xs-WfsIjAZA6g7b5GwVbSpMsmnsvReOQVJUkXA66MqPQ&usqp=CAE" width="200" height="200" alt="Samsung S21">
+            <h3>Samsung Galaxy S21 FE 5G (8GB/128GB)</h3>
+            <p>₹39,999</p>
+            <button onclick="addToCart('Samsung S21 FE', 39999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSG5Q7z692KwnYyH4y9HrHUvywZLcdCt7KpKqc2zggU6men_RUq9YJ_vP2VDcU8FM-Fu6X1q4-GcepI89pAl7u8XqHSyPWsY2ej1zQCxU4&usqp=CAE" width="200" height="200" alt="OnePlus 10 Pro">
+            <h3>OnePlus 10 Pro 5G (12GB/256GB)</h3>
+            <p>₹66,999</p>
+            <button onclick="addToCart('OnePlus 10 Pro', 66999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQdNxWSNvS1VJ-yyHYhShlME5NP8R4pdFhTAu8D4mdjJLpXHkzDMA-YE0oKUquK3ANPJErvYSpqjQY6UJsEjssW6KXxj_IpeyO8ZMHXRH5xiTBjZlTOngT8&usqp=CAE" width="200" height="200" alt="Redmi Note 11">
+            <h3>Xiaomi Redmi Note 11 (6GB/128GB)</h3>
+            <p>₹14,999</p>
+            <button onclick="addToCart('Redmi Note 11', 14999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYPLfz1Gp9KosFBfZjx9Yl3G1odt1A5ldOSDBGwnGlI4kO_Bn22aDf8vqq5q7ZVASubaYRGGK2QeROSfChlCblmEeMTf4P-WMt9Jec0fUA0R7XZagLVzlpwA&usqp=CAE" width="200" height="200" alt="Realme 9 Pro">
+            <h3>Realme 9 Pro 5G (8GB/128GB)</h3>
+            <p>₹21,999</p>
+            <button onclick="addToCart('Realme 9 Pro', 21999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzPsEJLi4qFm-a7uhTphgwTxKj84la6QsnEuGA5Js0hk5kmW9bOPbhiaPRXYgROMg9-bL6YNYPms7mtucCRl7Qeyvfuf9wbMJU4Yc8ILd5&usqp=CAE" width="200" height="200" alt="Vivo V23">
+            <h3>Vivo V23 5G (8GB/128GB)</h3>
+            <p>₹29,990</p>
+            <button onclick="addToCart('Vivo V23', 29990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQCBz-Ngf7tyII5MAKwQ2PoSCisUc2lugvGZuakYOIMeaPpi1NY1DKMdsi2PgqHG4Epfd7cI4cCpeqYC3qQfvGVL7jM0-VN-KT9TOIgcGcq60jBe2ZdpdiEUg&usqp=CAE" width="200" height="200" alt="Oppo Reno 7">
+            <h3>Oppo Reno 7 5G (8GB/128GB)</h3>
+            <p>₹29,990</p>
+            <button onclick="addToCart('Oppo Reno 7', 29990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTY_LGmrQl7GZ9ApOrDyJzrxAkisAwj_7Z7oe_oPBQKhep9C3-_mNAK5ZVDF9Che4xlkdx1qvqUCqy6hSxj-1Ipta8Z9E1Sn03Erl2JoW-4WzCQ6uNhX1zw&usqp=CAE" width="200" height="200" alt="iPhone 12">
+            <h3>Apple iPhone 12 (64GB) - Black</h3>
+            <p>₹52,900</p>
+            <button onclick="addToCart('iPhone 12', 52900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQcZOUirHpjgAeOJL7cytp1GLqa3s8_M_lqBoz4LyZPI2OukPCEfXW7NtkLF1lx7qdXkuaejnd-QbeuSQIK5T9cX2kI4DpschACea1uiOZ8ESgvhs1uOJrl&usqp=CAE" width="200" height="200" alt="Samsung A53">
+            <h3>Samsung Galaxy A53 5G (8GB/128GB)</h3>
+            <p>₹34,999</p>
+            <button onclick="addToCart('Samsung A53', 34999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTBK9YAMoNqJy-Qorm7j32zbE68hOHteXQSbDSQpAVzlw_GyZMbb7QRbMbbBt9GKA1TilHlLR_F4Gi8v9esVi4lue_rxCxwow&usqp=CAE" width="200" height="200" alt="OnePlus Nord 2">
+            <h3>OnePlus Nord 2 5G (8GB/128GB)</h3>
+            <p>₹28,999</p>
+            <button onclick="addToCart('OnePlus Nord 2', 28999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqVK7NEMwKdZ8498vWGxrgy4t54AssJRui0oHAHWhqsGS3E6skZ0X-kvzEKmScGCJpPW6sZLrbS5rhH1IFU_KIReYp2qAP4TReuAphYdCozWtv6CTuLBDNZQ&usqp=CAE" width="200" height="200" alt="Redmi 11 Prime">
+            <h3>Xiaomi Redmi 11 Prime (6GB/128GB)</h3>
+            <p>₹12,999</p>
+            <button onclick="addToCart('Redmi 11 Prime', 12999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTLfxRE3COLvpEd_VpqFifA-johJslshJx8TM0JslqIXeD3_2MjF7amfBZwEkHtuW8AeueuWxeUlhICDAD4TcelaCRLnCShiCbOwnglXWMgrB-C-kGt6jPu&usqp=CAE" width="200" height="200" alt="Realme Narzo 50">
+            <h3>Realme Narzo 50 (6GB/128GB)</h3>
+            <p>₹14,999</p>
+            <button onclick="addToCart('Realme Narzo 50', 14999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSn_IAOF294Nnr4iZDbW93fNJjbvrZb7zgcuFNZByHG9vkFlVRegKqmOJ5MsljZPiYp_Ak7XY3cSu8-o08lb0ZiijiavLlfpdjpElbsq9o54omS76faKiV6&usqp=CAE" width="200" height="200" alt="Vivo T1">
+            <h3>Vivo T1 5G (6GB/128GB)</h3>
+            <p>₹18,990</p>
+            <button onclick="addToCart('Vivo T1', 18990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSuZBk7yUybqAJUlIHkXVvFyIEn-Qh_cyWkkWQb6TbbzVi44XghAd7IXR0bJN7yJO6LQrraUX6XAwbSML__SF_Yn9GuD8lzLjWTGimTyHwOrwbqgH4RCxFO&usqp=CAE" width="200" height="200" alt="Oppo A76">
+            <h3>Oppo A76 (6GB/128GB)</h3>
+            <p>₹16,990</p>
+            <button onclick="addToCart('Oppo A76', 16990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTIHAvxV6MRU9iPLc2oOQaFRlpjF2Bn-EbJ7Al1YFmzjK1Oj-aGo3WMi4eiTF8H1zwyQglie3hUCujF-UcFrzBuPwywERhnfgshZ8K_nXI7yDRxS-hoaQ6C9g&usqp=CAE" width="200" height="200" alt="iPhone SE">
+            <h3>Apple iPhone SE (64GB) - Midnight</h3>
+            <p>₹43,900</p>
+            <button onclick="addToCart('iPhone SE', 43900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRfRnS7O8wAEi823CRMR5vraWTk8xKWwiggarSwfzfD3snrJvXB_1NG5qfzmSPGA6fj2ajJdKBvYWK0FsqbcSVMeWFdphiAH2vUam320PFN6TztLyhQQW8o-g&usqp=CAE" width="200" height="200" alt="Samsung M33">
+            <h3>Samsung Galaxy M33 5G (8GB/128GB)</h3>
+            <p>₹19,999</p>
+            <button onclick="addToCart('Samsung M33', 19999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTkjcHvYhsPio5I8onKC_pgwggDZdhdOmGbwpenSYGR3R2kltFCr1yzdXI1J0fw_p8sanaoO-r6rmsqHQq6FOjQ7juNk_hyUTBRGLgBnk5m1bPKM6F9t47dag&usqp=CAE" width="200" height="200" alt="OnePlus 9RT">
+            <h3>OnePlus 9RT 5G (8GB/128GB)</h3>
+            <p>₹42,999</p>
+            <button onclick="addToCart('OnePlus 9RT', 42999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTjEoeOw8vYehETGGNBoioJ5AN4Urb7MBruFWb2OUe880DeFfiQfMYwAGL3ELpZH2S7o4avDJbm9ZsfIKiLnC_jumwGFar7JXci35oT722vDHcmprMzJtrfqg&usqp=CAE" width="200" height="200" alt="Redmi Note 10 Pro">
+            <h3>Xiaomi Redmi Note 10 Pro (8GB/128GB)</h3>
+            <p>₹19,999</p>
+            <button onclick="addToCart('Redmi Note 10 Pro', 19999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ-YetEGLeq36gFQO7btYuCnmkvgef6nOvIHw1CNVPRwsXgY-NPGf8JaI53w3dK79QbvblBIhTCZ5Qk-NjZLPAYho5nVXQvkn8veEJqnAg&usqp=CAE" width="200" height="200" alt="Realme GT Neo 3">
+            <h3>Realme GT Neo 3 (8GB/128GB)</h3>
+            <p>₹29,999</p>
+            <button onclick="addToCart('Realme GT Neo 3', 29999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQr6BnyfWHdMxJ2A9S7iaifAyvJOkZdFC6h8LlPSqwT4HqNss4JwmFYwXbIjpVW9fVaT9X9XcGvmnaMHymf0T40-Cw2ycVwglkRaCuD9gvak2wrgEaBTICm&usqp=CAE" width="200" height="200" alt="Vivo Y75">
+            <h3>Vivo Y75 5G (8GB/128GB)</h3>
+            <p>₹21,990</p>
+            <button onclick="addToCart('Vivo Y75', 21990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 21 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSC5oMht18qrAye2TxrhzPcbP8Ph-jsjsLrsXo-Kns4K42YXeKaTSvFzq5-68OQfF5nGuaWEl9o3EDDmqtckl26RfcaNIe6wq0iYuJDalSz9HyROC_m4Mh3&usqp=CAE" width="200" height="200" alt="Oppo F21 Pro">
+            <h3>Oppo F21 Pro (8GB/128GB)</h3>
+            <p>₹22,990</p>
+            <button onclick="addToCart('Oppo F21 Pro', 22990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 22 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTZhHJrRDiWWqYb6pmdEPE0KlLXU1oPKNrHXAH-bHvvWqTAi_zP0nridvoRpOvor8_r0erAswdrzT3h93y2ys411KIXfieVsrmjzMCYKTNcL_1lAo_rTYpr6A&usqp=CAE" width="200" height="200" alt="iPhone 11">
+            <h3>Apple iPhone 11 (64GB) - Black</h3>
+            <p>₹44,900</p>
+            <button onclick="addToCart('iPhone 11', 44900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 23 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZVF_Wawhnrpu4_zylaQ7uDhej2_wgYsauTqT4z0RByYj6_i25Uawsl8gfkhDpJ8X633NQzX17qE8EmYB-CqrHXcCZJeJypDHwJVfgwrGFXbZxjh4NcfHXWA&usqp=CAE" width="200" height="200" alt="Samsung A23">
+            <h3>Samsung Galaxy A23 (6GB/128GB)</h3>
+            <p>₹19,499</p>
+            <button onclick="addToCart('Samsung A23', 19499)">Add to Cart</button>
+        </div>
+
+        <!-- Product 24 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRXZesN1jO_AqTx3rs43aMAzKxhxDEJdGL2wj62zrnkE8j5beWTwV3c1_eCQnq4wWdcQpDURUTk1xFzuw8_vJIpXUbEeMTU8aE_B1XKhrVIeuFxf_2GfieITQ&usqp=CAE" width="200" height="200" alt="OnePlus Nord CE 2">
+            <h3>OnePlus Nord CE 2 5G (8GB/128GB)</h3>
+            <p>₹23,999</p>
+            <button onclick="addToCart('OnePlus Nord CE 2', 23999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 25 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTCjKmYvpXlgEGR-u3kvtvxOjdYL_lMdkD9kHW8GJ9WyICPPXGT_l9gvGSZsJERDZaNUqxZnDnEyGgS9y0asi1ShjcoqV6Yf3lLsdNm7R8&usqp=CAE" width="200" height="200" alt="Redmi 10">
+            <h3>Xiaomi Redmi 10 (6GB/128GB)</h3>
+            <p>₹12,999</p>
+            <button onclick="addToCart('Redmi 10', 12999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 26 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQUmJ8U88owm7GCBA778S703ivmuStfs9FDE49M_k8AWCOBLRRUHfi3aKTtquArJTlbbgSmnwlUSbvYQSJStVZDmu3EorI5a-tyrXahhmt2RYRLAvoCf8j9wQ&usqp=CAE" width="200" height="200" alt="Realme 8i">
+            <h3>Realme 8i (6GB/128GB)</h3>
+            <p>₹14,999</p>
+            <button onclick="addToCart('Realme 8i', 14999)">Add to Cart</button>
+        </div>
+
+        <!-- Product 27 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRyz4GyXx-OM1qfi_RerjS4ETvgj9pUv3WKa4o3sEKeFE0OM60EVyTHrGM7-Ebn25HPr6eqGmylcxACwHB-Q2unsnGktSb5HtwKGLbh9iIekUjdj16VYOkXdA&usqp=CAE" width="200" height="200" alt="Vivo Y21">
+            <h3>Vivo Y21 (4GB/64GB)</h3>
+            <p>₹13,990</p>
+            <button onclick="addToCart('Vivo Y21', 13990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 28 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTSaNJ7WYOcbQnpMg1aWuJ8sKU1jykTv29TFyZ-kwG1eQnkmL_JNhYB22BPVAfbta1cadymlpMiPT6R5rqYLbmJCHFjDLvSfGFe7xO0NlYxGIzcVcPIvMCF&usqp=CAE" width="200" height="200" alt="Oppo A54">
+            <h3>Oppo A54 (6GB/128GB)</h3>
+            <p>₹14,990</p>
+            <button onclick="addToCart('Oppo A54', 14990)">Add to Cart</button>
+        </div>
+
+        <!-- Product 29 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQxEdgqBOlwEPxmWNiv1eEHJhxxJufS3Jmj1VeGs29SA-BAHrD2nsH4Vb8l77qGfZRc3dD3rpixddUrGXoqoqILOijEmQz0WxJibGbbO8v5grgt0KkztBvm&usqp=CAE" width="200" height="200" alt="iPhone 13 Pro">
+            <h3>Apple iPhone 13 Pro (128GB) - Graphite</h3>
+            <p>₹1,19,900</p>
+            <button onclick="addToCart('iPhone 13 Pro', 119900)">Add to Cart</button>
+        </div>
+
+        <!-- Product 30 -->
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRocuEKAesEVRn5-96OgsUu7oC3jFOEUjrEs67KwlJNcvFPbrbMSdaPpowNa0GjPRgUAG5JNwKPyY9xJ_ajWJQmps-h3GhW_MSrGZmLHcw4NSctZjEffbth&usqp=CAE"width="200" height="200" alt="iPhone 13 Pro">
+            <h3>Apple iPhone 06 Pro (128GB) - Graphite</h3>
+            <p>₹1,19,900</p>
+            <button onclick="addToCart('iPhone 13 Pro', 119900)">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your one-stop destination for the latest and greatest mobile phones at competitive prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: PickNshop@mobilephones.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Address: 123 Mobile Street, Tech City, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">📱</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mobile Phones. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

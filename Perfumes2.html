@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .product p {
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b><i>LUXURY PERFUMES</i></b></h1>
+        <hr style="border: 0; border-top: 5px solid black;">
+        <nav>
+            <h1><p align="center" style="background-color:#FFFFFF;"><b><i>LUXURY PERFUME COLLECTION</i></b></h1></p>
+         <a href="index.html">home</a>
+        </nav>
+    </header>
+
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Chanel_Bleu_de_Chanel_edp_0b42e2f8-5052-4cb8-a5ee-e23b269d11ec.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715354538&width=720">
+            <h3>Chanel Bleu De Chanel Eau De Parfum</h3>
+            <p>₹825.00</p>
+            <button onclick="addToCart(Chanel Bleu De Chanel Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/1_9af93470-2717-4199-9b2f-242abeaaeafc.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1717850412&width=720">
+            <h3>Louis Vuitton Afternoon Swim Eau De </h3>
+            <p>₹1,690.00</p>
+            <button onclick="addToCart(Louis Vuitton Afternoon Swim Eau De )">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/EROS_man_VERSACE_a896435e-23f6-44db-a3ec-9a538edad785.png?crop=region&crop_height=1472&crop_left=242&crop_top=0&crop_width=986&v=1715360242&width=720">
+            <h3>Versace Eros Man Eau De Parfum</h3>
+            <p>₹5450.00</p>
+            <button onclick="addToCart(Versace Eros Man Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/SAUVAGE_DIOR_c3f615ff-8539-41f9-8e94-057aced3c3d7.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715355226&width=720">
+            <h3>Dior Sauvage Eau De Parfum</h3>
+            <p>₹14,999</p>
+            <button onclick="addToCart(Dior Sauvage Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/1_1_29ed4030-3e81-44f3-beae-faadf6694b08.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1717014745&width=720">
+            <h3>Paco Rabanne One Million Royal</h3>
+            <p>₹3,589</p>
+            <button onclick="addToCart(Paco Rabanne One Million Royal)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/ABSOLU_ARMANI_cfd2ce92-e19b-4219-bad6-2655cc9c8a10.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715355911&width=720">
+            <h3>Giorgio Armani Acqua Di Gio Absolu Eau De Parfum</h3>
+            <p>₹2,000</p>
+            <button onclick="addToCart(Giorgio Armani Acqua Di Gio Absolu Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/y_YVES_SAIINT_LAURENT_ed259e21-5d83-4a9c-ae6c-ccc64cb8817c.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715360778&width=720">
+            <h3>Yves Saint Laurent Y Eau De Parfum</h3>
+            <p>₹1,000</p>
+            <button onclick="addToCart(Yves Saint Laurent Y Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Byredo_Bal_D_afrique_EDP_de075d6b-b099-43b5-8c68-5e84b822a9ae.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715354047&width=720">
+            <h3>Byredo Bal D'afrique Eau De Parfum</h3>
+            <p>₹1,200</p>
+            <button onclick="addToCart(Byredo Bal D'afrique Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Acqua_Di_Gio_Parfum_35b46f28-ebaf-43be-be7c-d86a26c3ca6c.png?crop=region&crop_height=1472&crop_left=242&crop_top=0&crop_width=986&v=1715355815&width=720">
+            <h3>Giorgio Armani Acqua Di Gio Parfum</h3>
+            <p>₹10,999</p>
+            <button onclick="addToCart(Giorgio Armani Acqua Di Gio Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/1_3_1ffc320d-7b4f-47d0-9fcc-a2cffff35aef.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1717014701&width=720">
+            <h3>Orto Parisi Megamare Extrait De Parfum</h3>
+            <p>₹2,190</p>
+            <button onclick="addToCart(Orto Parisi Megamare Extrait De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/aventus_creed_a768f01b-2201-4ee3-bcd3-2ecd90238b21.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715354895&width=720">
+            <h3>Creed Aventus Eau De Parfum</h3>
+            <p>₹2,090</p>
+            <button onclick="addToCart(Creed Aventus Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Parada_d321d253-b983-4ff1-97e2-ca920365fb0b.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715358875&width=720">
+            <h3>Prada Carbon Luna Rossa Eau De Toilette</h3>
+            <p>₹4,786</p>
+            <button onclick="addToCart(Prada Carbon Luna Rossa Eau De Toilette)">Add to Cart</button>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Hermes_Terre_D_hermes_Eau_Givre_edp_4d63035e-e8f6-4daa-9bcf-e12eac907522.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715356407&width=720">
+            <h3>Hermes Terre D'hermes Eau Givree Eau</h3>
+            <p>₹5,750</p>
+            <button onclick="addToCart(Hermes Terre D'hermes Eau Givree Eau)">Add to Cart</button>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Viktor_and_Rolf_Spicebomb_Extreme_87cf3c7b-837a-4290-a60f-7a56acf62d5b.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715360444&width=720">
+            <h3>Viktor & Rolf Spicebomb Extreme Eau De Parfum</h3>
+            <p>₹6,950</p>
+            <button onclick="addToCart(Viktor & Rolf Spicebomb Extreme Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/UOMO_BIR_INTENSE_EDP_5_ae070df0-5ac6-4c65-8814-396190383662.png?crop=region&crop_height=1000&crop_left=165&crop_top=0&crop_width=670&v=1722341269&width=720">
+            <h3>Valentino Uomo Born In Roma Intense Eau De Parfum</h3>
+            <p>₹5,000</p>
+            <button onclick="addToCart(Valentino Uomo Born In Roma Intense Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Ombre_leather_12dd095f-bdb7-4244-a13a-224fbd86150f.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715359557&width=720">
+            <h3>Tom Ford Ombre Leather Eau De Parfum</h3>
+            <p>₹8,750</p>
+            <button onclick="addToCart(Tom Ford Ombre Leather Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/WOOD_ESSENCE_BVLGARI_02d3c4e9-de80-4e43-8c47-7b881c5cda8c.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715354008&width=720">
+            <h3>Bvlgari Wood Essence Eau De Parfum</h3>
+            <p>₹2,996</p>
+            <button onclick="addToCart(Bvlgari Wood Essence Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/OmbreNomade.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1717091006&width=720">
+            <h3>Louis Vuitton Ombre Nomade Eau De Parfum</h3>
+            <p>₹9,980</p>
+            <button onclick="addToCart(Louis Vuitton Ombre Nomade Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/MOST_WANTED_AZZARO_Le_Parfum_28ab6db6-8781-4984-aced-c591c5c6049f.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715353457&width=720">
+            <h3>Azzaro The Most Wanted Parfum</h3>
+            <p>₹2,000</p>
+            <button onclick="addToCart(Azzaro The Most Wanted Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/L_HOMME_IDEAL_975949b6-565c-444b-a3af-5487cd2bb941.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715356288&width=720">
+            <h3>Guerlain L'Homme Ideal Eau De Parfum</h3>
+            <p>₹1,990</p>
+            <button onclick="addToCart(Guerlain L'Homme Ideal Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 21 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/D_G_light_blue_eau_intense_d270a445-ba37-4035-ace8-fec0a642cf99.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715755183&width=720">
+            <h3>Dolce & Gabbana Light Blue Eau Intense Men Eau De Parfum</h3>
+            <p>₹5,890</p>
+            <button onclick="addToCart(Dolce & Gabbana Light Blue Eau Intense Men Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 22 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Creed_EDP_99f6ecee-9de1-4730-b613-b8d418fbda74.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715354847&width=720">
+            <h3>Creed Viking Cologne Eau De Parfum</h3>
+            <p>₹1,900</p>
+            <button onclick="addToCart(Creed Viking Cologne Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 23 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Armani_EDT_af9bcffb-18a7-4b1e-b1d8-698d3703a5c6.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715355777&width=720">
+            <h3>Giorgio Armani Code Eau De Toilette</h3>
+            <p>₹9,499</p>
+            <button onclick="addToCart(Giorgio Armani Code Eau De Toilette)">Add to Cart</button>
+        </div>
+
+        <!-- Product 24 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/24_GOLD_OUD_SCENT_STORY_d85b1f16-4276-4156-840b-d71fd8f7c2f2.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1715359410&width=720">
+            <h3>Scent Story 24 Gold Oud Eau De Toilette</h3>
+            <p>₹1,090</p>
+            <button onclick="addToCart(Scent Story 24 Gold Oud Eau De Toilette)">Add to Cart</button>
+        </div>
+
+        <!-- Product 25 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Killian_Share_EDP_153fe253-18cf-44a0-9437-18482eefc806.png?crop=region&crop_height=1440&crop_left=237&crop_top=0&crop_width=964&v=1715356902&width=720">
+            <h3>Kilian Angels Share Eau De Parfum</h3>
+            <p>₹2,400</p>
+            <button onclick="addToCart(Kilian Angels Share Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 26 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/HOMME_DIOR_600eb7d4-3b62-4380-9802-73073978a14e.png?crop=region&crop_height=1472&crop_left=242&crop_top=0&crop_width=986&v=1715355178&width=720">
+            <h3>Dior Homme Parfum</h3>
+            <p>₹14,999</p>
+            <button onclick="addToCart(Dior Homme Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 27 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/Costa_Azzurra_7a8199c3-0419-4ee5-9f5e-0b3d1c23c9bc.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715359725&width=720">
+            <h3>Tom Ford Costa Azzurra Parfum</h3>
+            <p>₹3,590</p>
+            <button onclick="addToCart(Tom Ford Costa Azzurra Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 28 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/EROS_FLAME_b7e0ef35-d90a-4955-a121-7bb8ca8d1f29.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715360196&width=720">
+            <h3>Versace Eros Flame Eau De Parfum</h3>
+            <p>₹14,990</p>
+            <button onclick="addToCart(Versace Eros Flame Eau De Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 29 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/GUCCI_GUILTY_MAN_af4a999b-2eb9-4da0-af61-2d30c1b05ae1.png?crop=region&crop_height=800&crop_left=132&crop_top=0&crop_width=536&v=1715356215&width=720">
+            <h3>Gucci Guilty Man Parfum</h3>
+            <p>₹8,900</p>
+            <button onclick="addToCart(Gucci Guilty Man Parfum)">Add to Cart</button>
+        </div>
+
+        <!-- Product 30 -->
+        <div class="product">
+            <img src="https://scentira.in/cdn/shop/files/2_1_05a7196c-73d4-4ea6-b2d7-fc0d91edb7a7.png?crop=region&crop_height=1080&crop_left=178&crop_top=0&crop_width=723&v=1715360119&width=720">
+            <h3>Valentino Uomo Eau De Toilette</h3>
+            <p>₹4,900</p>
+            <button onclick="addToCart(Valentino Uomo Eau De Toilette)">Add to Cart</button>
+        </div>
+      
+   
+
+    
+</section> </td>
+    </tr>
+ 
+    </table>
+      
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 PickNShop</p>
+    </footer>
+     
+
+    <script src="script.js"</script>
+</body>
+</html>
