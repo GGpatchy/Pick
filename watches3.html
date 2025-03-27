@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .product p {
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         
+        <h1><b><i>LUXURY WATCHES</i></b></h1>
+        
+        <hr style="border: 0; border-top: 10px solid black;">
+        <nav>
+           <h1><p align="center" style="background-color:#FFFFFF;"><b><i>PickNShop</i></b></h1></p>
+         <a href="index.html">home</a>
+        </nav>
+    </header>
+   
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-astronomia-as300-40-aa-ac-abala.jpg">
+            <h3>JACOB & CO.ASTRONOMIA</h3>
+            <p>₹ 3,58,00,000</p>
+            <button onclick="addToCart(JACOB & CO.ASTRONOMIA)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-casino-tourbillon-ca100-40-ab-ba-abala.jpg">
+            <h3>JACOB & CO.CASINO TOURBILLON</h3>
+            <p>₹ 3,90,00,000</p>
+            <button onclick="addToCart(JACOB & CO.CASINO TOURBILLON)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-astronomia-regulator-ar200-40-aa-ac-abala.jpg">
+            <h3>JACOB & CO.ASTRONOMIA</h3>
+            <p>₹ 2,88,00,000</p>
+            <button onclick="addToCart(JACOB & CO.ASTRONOMIA)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-ex120-43-ac-ac-a40aa.jpg">
+            <h3>JACOB & CO.EPIC X</h3>
+            <p>₹ 1,34,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-the-dual-time-zone-dt100-40-aa-ae-abala.jpg">
+            <h3>JACOB & CO.THE WORLD IS YOURS DUAL TIME ZONE</h3>
+            <p>₹ 61,00,000</p>
+            <button onclick="addToCart(JACOB & CO.THE WORLD IS YOURS DUAL TIME ZONE)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-brilliant-bs431-40-rd-qr-abala.jpg">
+            <h3>JACOB & CO.BRILLIANT</h3>
+            <p>₹ 97,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BRILLIANT)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-brilliant-bs431-40-rd-qb-abala.jpg">
+            <h3>JACOB & CO.BRILLIANT</h3>
+            <p>₹ 97,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BRILLIANT)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-brilliant-bq020-40-rh-aa-abala_1.jpg">
+            <h3>JACOB & CO.BRILLIANT</h3>
+            <p>₹ 61,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BRILLIANT)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-v2-ex120-43-af-aa-abrua.jpg">
+            <h3>JACOB & CO.EPIC X</h3>
+            <p>₹ 62,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X)">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-ex120-43-ac-ac-abrua.jpg">
+            <h3>JACOB & CO.EPIC X</h3>
+            <p>₹ 62,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X)">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-brilliant-bq020-40-ro-kr-abala.jpg">
+            <h3>JACOB & CO.BRILLIANT</h3>
+            <p>₹ 48,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BRILLIANT)">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-chrono-ec430-21-aa-aa-abrua.jpg">
+            <h3>JACOB & CO.EPIC X CHRONO</h3>
+            <p>₹ 25,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X CHRONO)">Add to Cart</button>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-palatial-pc400-10-aa-ad-abala.jpg">
+            <h3>JACOB & CO.PALATIAL</h3>
+            <p>₹ 17,00,000</p>
+            <button onclick="addToCart(JACOB & CO.PALATIAL)">Add to Cart</button>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-the-five-time-zone-jcm23_1.jpg">
+            <h3>JACOB & CO.THE FIVE TIME ZONE</h3>
+            <p>₹ 7,00,000</p>
+            <button onclick="addToCart(JACOB & CO.THE FIVE TIME ZONE)">Add to Cart</button>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-caligula-cl100-10-ns-ab-aca4a.jpg">
+            <h3>JACOB & CO.CALIGULA</h3>
+            <p>₹ 31,00,000</p>
+            <button onclick="addToCart(JACOB & CO.CALIGULA)">Add to Cart</button>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-chrono-ec312-42-pb-gn-ahb4d.jpg">
+            <h3>JACOB & CO.EPIC X CHRONO</h3>
+            <p>₹ 29,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X CHRONO)">Add to Cart</button>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-astronomia-as310-21-ab-aa-a.jpg">
+            <h3>JACOB & CO.ASTRONOMIA</h3>
+            <p>₹ 3,58,00,000</p>
+            <button onclick="addToCart(JACOB & CO.ASTRONOMIA)">Add to Cart</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-fleurs-de-jardin-af321-40-ba-ab-a_1.jpg">
+            <h3>JACOB & CO.FLEURS DE JARDIN</h3>
+            <p>₹ 3,90,00,000</p>
+            <button onclick="addToCart(JACOB & CO.FLEURS DE JARDIN)">Add to Cart</button>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-astronomia-solar-zodiac-as310-40-sp-zk-a.jpg">
+            <h3>JACOB & CO.ASTRONOMIA</h3>
+            <p>₹ 3,58,00,000</p>
+            <button onclick="addToCart(JACOB & CO.ASTRONOMIA)">Add to Cart</button>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-opera-godfather-op110-21-ag-ab-a.jpg">
+            <h3>JACOB & CO.OPERA GODFATHER</h3>
+            <p>₹ 4,07,00,000</p>
+            <button onclick="addToCart(JACOB & CO.OPERA GODFATHER)">Add to Cart</button>
+        </div>
+
+        <!-- Product 21 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-epic-x-ex82-43-bd-bd-abrua.jpg">
+            <h3>JACOB & CO.EPIC X</h3>
+            <p>₹ 3,49,00,000</p>
+            <button onclick="addToCart(JACOB & CO.EPIC X)">Add to Cart</button>
+        </div>
+
+        <!-- Product 22 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-palatial-classic-pc300-40-ns-ne-acc4a.jpg">
+            <h3>JACOB & CO.PALATIAL</h3>
+            <p>₹ 23,10,000</p>
+            <button onclick="addToCart(JACOB & CO.PALATIAL)">Add to Cart</button>
+        </div>
+
+        <!-- Product 23 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-bugatti-chiron-tb-bu200-40-aa-aa-bbrua_1.jpg">
+            <h3>JACOB & CO.BUGATTI CHIRON TOURBILLON</h3>
+            <p>₹ 4,01,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BUGATTI CHIRON TOURBILLON)">Add to Cart</button>
+        </div>
+
+        <!-- Product 24 -->
+        <div class="product">
+            <img src="https://cdn1.ethoswatches.com/media/catalog/product/cache/06b0325fe0d1ea074c67035fe5935845/j/a/jacob-co-bugatti-chiron-tb-bu200-30-aa-aa-b_1.jpg">
+            <h3>JACOB & CO.BUGATTI CHIRON TOURBILLON</h3>
+            <p>₹ 4,16,00,000</p>
+            <button onclick="addToCart(JACOB & CO.BUGATTI CHIRON TOURBILLON)">Add to Cart</button>
+        </div>
+
+        <!-- Product 25 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/3441fcb4-6081-4403-25c0-f641e71b8600/w=400x400">
+            <h3>JACOB & CO. EPIC X CHRONO ROSE GOLD BAGUETTE ROSE GOLD BRACELET </h3>
+            <p>₹ 3,10,00,000</p>
+            <button onclick="addToCart(JACOB & CO. EPIC X CHRONO ROSE GOLD BAGUETTE ROSE GOLD BRACELET)">Add to Cart</button>
+        </div>
+
+        <!-- Product 26 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/574850e7-1ea8-4aa7-8f3f-f3bf020ad100/w=400x400">
+            <h3>JACOB & CO. CAVIAR TOURBILLON DIAMONDS</h3>
+            <p>₹ 4,75,00,000</p>
+            <button onclick="addToCart(JACOB & CO. CAVIAR TOURBILLON DIAMONDS)">Add to Cart</button>
+        </div>
+
+        <!-- Product 27 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/6020f1bd-6875-4432-0b11-3ed200d9a600/w=400x400">
+            <h3>JACOB & CO. HIGH COMPLICATION MASTERPIECES CASINO TOURBILLON BAGUETTE DIAMONDS</h3>
+            <p>₹ 3,95,00,000</p>
+            <button onclick="addToCart(JACOB & CO. HIGH COMPLICATION MASTERPIECES CASINO TOURBILLON BAGUETTE DIAMONDS)">Add to Cart</button>
+        </div>
+
+        <!-- Product 28 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/dd9b6f5c-3e07-4fae-076c-65f4d4877b00/w=400x400">
+            <h3>JACOB & CO. EPIC SF24 TOURBILLON BAGUETTE </h3>
+            <p>3,10,00,000</p>
+            <button onclick="addToCart(JACOB & CO. EPIC SF24 TOURBILLON BAGUETTE)">Add to Cart</button>
+        </div>
+
+        <!-- Product 29 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/2a698dfb-2be3-4d60-19f7-35c7644b9600/w=400x400">
+            <h3>JACOB & CO. CAVIAR TOURBILLON DIAMOND BRACELET TSAVORITES</h3>
+            <p>₹ 4,75,00,000</p>
+            <button onclick="addToCart(JACOB & CO. CAVIAR TOURBILLON DIAMOND BRACELET TSAVORITES)">Add to Cart</button>
+        </div>
+
+        <!-- Product 30 -->
+        <div class="product">
+            <img src="https://imagedelivery.net/lyg2LuGO05OELPt1DKJTnw/dc3b2e69-2658-41e8-955e-c320f8aa9d00/w=400x400">
+            <h3>JACOB & CO. BILLIONAIRE III</h3>
+            <p>₹ 5,10,00,000</p>
+            <button onclick="addToCart(JACOB & CO. BILLIONAIRE III)">Add to Cart</button>
+        </div>
+      
+   
+
+    
+</section> </td>
+    </tr>
+ 
+    </table>
+      
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 PickNShop</p>
+    </footer>
+     
+
+    <script src="script.js"</script>
+</body>
+</html>
